@@ -1,0 +1,30 @@
+# vision_demo Python 依赖
+# 镜像 ros-moveit2:humble-vision 已装全部依赖，本文件仅作文档用途。
+# 如需独立 venv 复现，运行：pip install -r requirements.txt
+
+# 核心
+numpy>=1.21
+opencv-contrib-python-headless>=4.6
+scikit-image>=0.19
+scipy>=1.7
+
+# 视觉 AI
+ultralytics>=8.0          # YOLOv8
+torch>=2.0               # 视觉深度学习框架
+torchvision>=0.15
+
+# USB / 硬件
+pyusb>=1.2
+pyserial>=3.5
+
+# ROS 2 相关包由 apt 提供，通过容器内 ros:humble-ros-base 装载：
+#   ros-humble-realsense2-camera
+#   ros-humble-cv-bridge
+#   ros-humble-image-transport
+#   ros-humble-sensor-msgs-py
+#   ros-humble-pcl-conversions
+#   ros-humble-moveit
+#   ros-humble-moveit-planners
+#   ros-humble-moveit-simple-controller-manager
+#   ros-humble-moveit-servo
+#   ros-humble-moveit-resources-panda-* (演示资源)
